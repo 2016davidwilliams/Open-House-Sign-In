@@ -1,137 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brandy Williams Realty</title>
-
-    <link rel="stylesheet" href="styles.css">
-
-    https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2script>
-    config.jsscript>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brandy Williams Realty open house registration form">
+  <title>Brandy Williams Realty</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-
-<div class="hero">
+  <div class="hero">
     <div class="overlay">
+      <main class="form-card">
+        <h1>Brandy Williams Realty</h1>
+        <p class="subtitle">
+          Welcome! Please sign in so we can follow up regarding your real estate interests and provide additional property information.
+        </p>
 
-        <div class="form-card">
+        <form id="leadForm" autocomplete="on">
+          <input id="fullName" name="fullName" type="text" placeholder="Full Name" autocomplete="name" maxlength="120" required>
+          <input id="address" name="address" type="text" placeholder="Address" autocomplete="street-address" maxlength="250">
+          <input id="email" name="email" type="email" placeholder="Email Address" autocomplete="email" maxlength="180">
+          <input id="phone" name="phone" type="tel" placeholder="Phone Number" autocomplete="tel" maxlength="40">
 
-            <h1>Brandy Williams Realty</h1>
+          <h3>Are you currently working with an agent?</h3>
+          <div class="choice-group">
+            <label class="choice-row"><input type="radio" name="agent" value="Yes"> <span>Yes</span></label>
+            <label class="choice-row"><input type="radio" name="agent" value="No"> <span>No</span></label>
+          </div>
 
-            <p class="subtitle">
-                Welcome! Please sign in so we can follow up regarding your real estate interests and provide additional property information.
-            </p>
+          <h3>What best describes your current needs?</h3>
+          <div class="choice-group">
+            <label class="choice-row"><input type="checkbox" name="needs" value="Looking to buy now"> <span>Looking to buy now</span></label>
+            <label class="choice-row"><input type="checkbox" name="needs" value="Just browsing"> <span>Just browsing</span></label>
+            <label class="choice-row"><input type="checkbox" name="needs" value="Plan to buy within a year"> <span>Plan to buy within a year</span></label>
+            <label class="choice-row"><input type="checkbox" name="needs" value="Interested in selling"> <span>Interested in selling</span></label>
+          </div>
 
-            <form id="leadForm">
+          <textarea id="notes" name="notes" placeholder="Tell us a little about your real estate needs..." maxlength="1500"></textarea>
 
-                <input
-                    id="fullName"
-                    type="text"
-                    placeholder="Full Name"
-                    required
-                >
+          <div class="honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
 
-                <input
-                    id="address"
-                    type="text"
-                    placeholder="Address"
-                >
+          <label class="choice-row consent-row">
+            <input id="consent" name="consent" type="checkbox" required>
+            <span>I agree to be contacted regarding my real estate inquiry.</span>
+          </label>
 
-                <input
-                    id="email"
-                    type="email"
-                    placeholder="Email Address"
-                >
-
-                <input
-                    id="phone"
-                    type="tel"
-                    placeholder="Phone Number"
-                >
-
-                <h3>Are you currently working with an agent?</h3>
-
-                <label>
-                    <input type="radio" name="agent" value="Yes">
-                    Yes
-                </label>
-
-                <label>
-                    <input type="radio" name="agent" value="No">
-                    No
-                </label>
-
-                <h3>What best describes your current needs?</h3>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="needs"
-                        value="Looking to buy now"
-                    >
-                    Looking to buy now
-                </label>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="needs"
-                        value="Just browsing"
-                    >
-                    Just browsing
-                </label>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="needs"
-                        value="Plan to buy within a year"
-                    >
-                    Plan to buy within a year
-                </label>
-
-                <label>
-                    <input
-                        type="checkbox"
-                        name="needs"
-                        value="Interested in selling"
-                    >
-                    Interested in selling
-                </label>
-
-                <textarea
-                    id="notes"
-                    placeholder="Tell us a little about your real estate needs..."
-                ></textarea>
-
-                <label style="margin-top:20px;">
-                    <input
-                        id="consent"
-                        type="checkbox"
-                    >
-                    I agree to be contacted regarding my real estate inquiry.
-                </label>
-
-                <div id="status"></div>
-
-                <button
-                    id="submitBtn"
-                    type="submit"
-                >
-                    Submit Information
-                </button>
-
-            </form>
-
-        </div>
-
+          <button id="submitBtn" type="submit">Submit Information</button>
+          <div id="status" class="status" role="status" aria-live="polite"></div>
+        </form>
+      </main>
     </div>
-</div>
+  </div>
 
-<script src="app.js"></script>
-
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
 </body>
 </html>
