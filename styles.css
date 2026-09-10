@@ -21,25 +21,31 @@ body {
     background-position: center;
 }
 
-.overlay {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 40px;
+.overlay{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:40px;
 }
 
-.form-card {
-    width: 100%;
-    max-width: 650px;
+.form-card{
+    width:100%;
+    max-width:700px;
 
-    background: white;
-    border-radius: 24px;
+    background:white;
 
-    padding: 45px;
+    border-radius:24px;
+
+    padding:40px;
 
     box-shadow:
-    0 20px 40px rgba(0,0,0,.15);
+    0 10px 40px rgba(0,0,0,.2);
+
+    max-height:90vh;
+    overflow-y:auto;
 }
 
 h1 {
