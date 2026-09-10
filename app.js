@@ -7,7 +7,6 @@ function text(id){return document.querySelector(id).value.trim()}
 function selectedNeeds(){return [...document.querySelectorAll('input[name="needs"]:checked')].map(x=>x.value)}
 form.addEventListener('submit',async(e)=>{
  e.preventDefault(); statusBox.className='status'; statusBox.textContent='';
- const website=text('#website'); if(website) return;
  const email=text('#email'),phone=text('#phone');
  if(!email && !phone){statusBox.className='status err';statusBox.textContent='Please provide an email address or phone number.';return}
  const consent=document.querySelector('#consent').checked;
