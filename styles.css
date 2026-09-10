@@ -1,97 +1,106 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .hero {
     min-height: 100vh;
+
     background:
         linear-gradient(
             rgba(255,255,255,.65),
             rgba(255,255,255,.65)
         ),
-        url("https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80");
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80");
 
     background-size: cover;
     background-position: center;
 }
 
-.overlay{
-    min-height:100vh;
+.overlay {
+    min-height: 100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-    padding:40px;
+    padding: 40px 20px;
 }
 
-.form-card{
-    width:100%;
-    max-width:700px;
+.form-card {
+    width: 100%;
+    max-width: 700px;
 
-    background:white;
+    background: white;
 
-    border-radius:24px;
+    border-radius: 24px;
 
-    padding:40px;
+    padding: 40px;
 
     box-shadow:
-    0 10px 40px rgba(0,0,0,.2);
+        0 10px 40px rgba(0,0,0,.2);
 
-    max-height:90vh;
-    overflow-y:auto;
+    max-height: none;
+
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 h1 {
     text-align: center;
-    color: #b56c8f;
-    margin-bottom: 10px;
+    color: #c57d97;
+    margin-bottom: 15px;
 }
 
 .subtitle {
     text-align: center;
-    color: #666;
     margin-bottom: 30px;
+    color: #666;
     line-height: 1.6;
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
 textarea {
     width: 100%;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
     padding: 14px;
-    margin-bottom: 15px;
 
     border: 1px solid #ddd;
-    border-radius: 12px;
+    border-radius: 10px;
 
     font-size: 16px;
 }
 
 textarea {
     height: 120px;
+    resize: vertical;
 }
 
-.section-title {
-    display: block;
-    margin-top: 12px;
+h3 {
+    margin-top: 20px;
     margin-bottom: 10px;
-
-    font-weight: 600;
     color: #444;
 }
 
-.radio-group,
-.checkbox-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
 }
 
 button {
@@ -99,23 +108,45 @@ button {
 
     padding: 16px;
 
-    background: #d79ab2;
-    color: white;
-
     border: none;
     border-radius: 12px;
 
-    font-size: 16px;
-    font-weight: 600;
+    background: #d89bb4;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
 
     cursor: pointer;
+
+    margin-top: 25px;
 }
 
 button:hover {
-    background: #c77f9f;
+    background: #c77d9b;
 }
 
 #status {
-    margin-top: 16px;
+    margin-top: 20px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .form-card {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
