@@ -1,19 +1,48 @@
-https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2script> config.jsscript>
-Brandy Williams Realty
-Welcome! Please sign in so we can follow up regarding your real estate interests and provide additional property information.
+<!DOCTYPE html>
+<html lang="en">
 
-Full Name
- 
-Address
- 
-Email Address
- 
-Phone Number
- Are you currently working with an agent?
- Yes  No
-What best describes your current needs?
- Looking to buy now  Just browsing  Plan to buy within a year  Interested in selling
-Tell us a little about your real estate needs...
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandy Williams Realty</title>
 
- Submit Information
-app.jsscript>
+    <link rel="stylesheet" href="styles.css">
+
+    https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2script>
+    config.jsscript>
+</head>
+
+<body>
+
+    <div class="hero">
+        <div class="overlay">
+
+            <div class="form-card">
+
+                <h1>Brandy Williams Realty</h1>
+
+                <p class="subtitle">
+                    Welcome! Please sign in so we can follow up regarding your
+                    real estate interests and provide additional property information.
+                </p>
+
+                <form id="leadForm">
+
+                    <input id="fullName" type="text" placeholder="Full Name" required>
+
+                    <input id="address" type="text" placeholder="Address">
+
+                    <input id="email" type="email" placeholder="Email Address">
+
+                    <input id="phone" type="tel" placeholder="Phone Number">
+
+                    <h3>Are you currently working with an agent?</h3>
+
+                    <label><input type="radio" name="agent" value="Yes"> Yes</label>
+                    <label><input type="radio" name="agent" value="No"> No</label>
+
+                    <h3>What best describes your current needs?</h3>
+
+                    <label><input type="checkbox" value="Looking to buy now"> Looking to buy now</label>
+                    <label><input type="checkbox" value="Just browsing"> Just browsing</label>
+                    <label><input type="checkbox" value="Plan
