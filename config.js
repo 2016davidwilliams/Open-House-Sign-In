@@ -1,6 +1,6 @@
 window.APP_CONFIG = {
-  supabaseUrl: "https://YOUR_PROJECT.supabase.co",
-  supabaseAnonKey: "YOUR_SUPABASE_ANON_KEY",
-  notificationEmail: "YOUR_EMAIL@example.com",
-  siteName: "Open House Connect"
+  supabaseUrl: "https://xnbuxmzsdqqazhzpkdol.supabase.co",
+  supabaseAnonKey: "sb_publishable_PA0xRJ8QubBCMhdotO6TZg_aKx7jqu0",
+  notificationEmail: "2016davidwilliams@gmail.com",
+  siteName: "Brandy Williams Open House Sign In"
 };
